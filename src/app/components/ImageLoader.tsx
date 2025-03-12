@@ -13,18 +13,18 @@ export default function UploadImage() {
             setImage(e.target.files[0]);
         }
     };
-    const handleSubmit = async () =>{
-        if(!image)return;
-        
+    const handleSubmit = async () => {
+        if (!image) return;
+
         const formData = new FormData();
         formData.append('file', image);
-    
+
         // Пример запроса на сервер
         const response = await fetch('/api/process-image', {
-          method: 'POST',
-          body: formData,
+            method: 'POST',
+            body: formData,
         });
-    
+
         const data = await response.json();
         setProcessedImage(data.processedImageUrl);
     }
@@ -83,7 +83,8 @@ export default function UploadImage() {
                 transition
                 duration-300
                 ease-in-out
-            "
+                "
+                onClick={handleSubmit}
                 >
                     Обработать
                 </button>
