@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image'
 import React, { useState } from 'react';
 
 
@@ -96,14 +97,14 @@ export default function UploadImage() {
                 <div className="w-1/2 h-full flex flex-col items-center">
                     <h3 className="text-lg text-center">Загруженное изображение:</h3>
                     {image && (
-                        <img src={URL.createObjectURL(image)} alt="Загруженное" className="w-xl h-xl" />
+                        <Image src={URL.createObjectURL(image)} alt="Загруженное" className="w-xl h-xl" />
                     )}
                 </div>
 
                 <div className="w-1/2 h-full">
                     <h3 className="text-lg text-center">Обработанное изображение:</h3>
                     {processedImage && (
-                        <img src={processedImage} alt="Обработанное" className="max-w-full max-h-full" />
+                        <Image src={processedImage} alt="Обработанное" className="max-w-full max-h-full" />
                     )}
                 </div>
             </div>
