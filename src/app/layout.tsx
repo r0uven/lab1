@@ -89,6 +89,21 @@ export default function RootLayout({
           >
             Обработанные
           </Link>
+          <Link 
+            href="/logging"
+            className="
+            text-blue-600
+            font-semibold
+            underline 
+            underline-offset-4
+            hover:text-blue-800
+            hover:underline-offset-8
+            transition-all
+            duration-300
+            ease-in-out
+            hover:shadow-lg
+          "
+          >Войти</Link>
         </nav>
       </header>
       <main>
