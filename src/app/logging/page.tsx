@@ -1,30 +1,30 @@
 "use client";
 
-import { useCallback, useState } from "react";
-import LoginPassword from "../components/LoginPassword";
+// import { useCallback, useState } from "react";
+// import LoginPassword from "../components/LoginPassword";
 
-interface AuthData {
-    login: string;
-    password: string;
-    loginError: string | null;
-    passwordError: string | null;
-}
+// interface AuthData {
+//     login: string;
+//     password: string;
+//     loginError: string | null;
+//     passwordError: string | null;
+// }
 
 
 export default function Logging() {
-    const [authData, setAuthData] = useState<AuthData>({ login: "", password: "", loginError: null, passwordError: null });
+    // const [authData, setAuthData] = useState<AuthData>({ login: "", password: "", loginError: null, passwordError: null });
 
-    const handleDataFromChild = useCallback((authData: AuthData) => {
-        setAuthData(authData); // Получение данных от дочернего компонента
-    }, []);
+    // const handleDataFromChild = useCallback((authData: AuthData) => {
+    //     setAuthData(authData); // Получение данных от дочернего компонента
+    // }, []);
 
-    const handleLogin = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Здесь добавьте свою логику логина (запрос к API и т.д.)
-        if (!authData.loginError && !authData.passwordError) {
-            console.log('Login:', authData.login, 'Password:', authData.password);
-        }
-    };
+    // const handleLogin = (e: React.FormEvent) => {
+    //     e.preventDefault();
+    //     // Здесь добавьте свою логику логина (запрос к API и т.д.)
+    //     if (!authData.loginError && !authData.passwordError) {
+    //         console.log('Login:', authData.login, 'Password:', authData.password);
+    //     }
+    // };
 
     return (
         // <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">

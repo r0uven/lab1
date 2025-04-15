@@ -1,13 +1,10 @@
 "use client";
 
 import Script from "next/script";
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./global.css"
-import Link from "next/link";
 
 import SmartNav from "./components/SmartNav";
-import { useEffect } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
